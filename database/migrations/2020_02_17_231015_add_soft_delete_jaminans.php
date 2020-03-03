@@ -28,7 +28,7 @@ class AddSoftDeleteJaminans extends Migration
     {
         Schema::table('jaminans', function (Blueprint $table) {
             //
-            $table->deleteSoftDeletes();
+            $table->dropSoftDeletes();
         });
     }
 }

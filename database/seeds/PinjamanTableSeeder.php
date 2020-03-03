@@ -11,6 +11,12 @@ class PinjamanTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Simpin\Infrastructure\Repository\Pinjaman\PinjamanEloquentRepository::class,10)->create();
+        $pinjaman = factory(Simpin\Infrastructure\Repository\Pinjaman\PinjamanEloquentRepository::class,10)->create();
+
+        foreach ($pinjaman as $p) {
+          factory(Simpin\Infrastructure\Repository\Jaminan\JaminanEloquentRepository::class)->create([
+            'id_pinjaman' => $p->id,
+          ]);
+        }
     }
 }

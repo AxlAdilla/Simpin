@@ -11,6 +11,6 @@ class JaminanTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Simpin\Infrastructure\Repository\Jaminan\JaminanEloquentRepository::class,10)->create();
+        // factory(Simpin\Infrastructure\Repository\Jaminan\JaminanEloquentRepository::class,10)->create();
     }
 }
