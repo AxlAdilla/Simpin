@@ -12,10 +12,10 @@ $factory->define(Simpin\Infrastructure\Repository\Jaminan\JaminanEloquentReposit
             break;
         case 0:
             $jaminan = 'Sertifikat Rumah';
-            break;    
+            break;
         case 2:
             $jaminan = 'Sertifikat Tanah';
-            break;    
+            break;
         default:
             $jaminan = 'Emas/Perhiasan';
             break;
