@@ -41,6 +41,9 @@ class AkunController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'username'=>'unique:users'
+        ]);
         $storeService = new StoreService($request);
         $storeService->execute();
         return redirect()->back()->with('notifikasi','Sukses Tambah Akun')->with('tipe_notifikasi','success');
@@ -87,6 +90,9 @@ class AkunController extends Controller
     }
     public function password_update(Request $request,$id)
     {
+        if($request->password != $request->konfirmasi_password){
+            return redirect()->back()->with('notifikasi','Password Tidak Sama')->with('tipe_notifikasi','danger');
+        }
         $passwordUpdateService = new PasswordUpdateService($request,$id);
         $passwordUpdateService->execute();
         return redirect()->back()->with('notifikasi','Sukses Edit Password')->with('tipe_notifikasi','success');

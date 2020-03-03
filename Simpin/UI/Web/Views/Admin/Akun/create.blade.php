@@ -29,6 +29,9 @@
                                 <div class="form-line">
                                     <input type="text" required class="form-control" placeholder="Username" name="username">
                                 </div>
+                                @error('username')
+                                <label id="username-error" class="error" for="username">{{$message}}</label>
+                                @enderror
                             </div>
                             <small style="font-weight:600">Password</small>
                             <div class="form-group">

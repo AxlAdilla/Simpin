@@ -90,7 +90,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            History <small>Rangkuman History</small>
+                            History {{ucfirst($data['anggota']->nama_anggota)}} <small>Rangkuman History</small>
                         </h2>
                     </div>
                     <div class="body" style="overflow-x:auto">

@@ -41,7 +41,7 @@ Route::namespace('Simpin\UI\Web\Controllers')->group(function () {
             ->name('pendaftaran_show');
             Route::delete('pendaftaran/{id}','Admin\PendaftaranController@destroy')
             ->name('pendaftaran_destroy');
-            Route::put('pendaftaran/{id}','Admin\PendaftaranController@update')
+            Route::post('pendaftaran/{id}/edit','Admin\PendaftaranController@update')
             ->name('pendaftaran_update');
             Route::get('pendaftaran/{id}/edit','Admin\PendaftaranController@edit')
             ->name('pendaftaran_edit');

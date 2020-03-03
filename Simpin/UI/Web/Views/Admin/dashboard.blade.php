@@ -266,6 +266,15 @@ $(function() {
 
     var start = moment("2020-01-01");
     var end = moment();
+    
+    var url = window.location.href
+    var patt = /\d*-\d*-\d*/gm;
+    var result = url.match(patt);
+
+    if (result != null) {
+        var start = moment(result[0]);
+        var end = moment(result[1]);
+    }
 
 
     function cb(start, end) {

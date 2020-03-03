@@ -33,8 +33,8 @@
                     <div class="header">
                         <div style="display:flex;justify-content:flex-end">
                             <a class="btn bg-indigo m-l-5 m-r-5" style="font-weight:700" onclick="print()"><i class="material-icons">
-                            print
-                            </i> PRINT</a>
+                            picture_as_pdf
+                            </i> EXPORT</a>
                             <a class="btn btn-success m-l-5 m-r-5" style="font-weight:700" href="{{route('pendaftaran_create')}}"><i class="material-icons">
                             add
                             </i> ANGGOTA</a>
@@ -149,6 +149,15 @@ $(function() {
 
     var start = moment("2020-01-01");
     var end = moment();
+    
+    var url = window.location.href
+    var patt = /\d*-\d*-\d*/gm;
+    var result = url.match(patt);
+
+    if (result != null) {
+        var start = moment(result[0]);
+        var end = moment(result[1]);
+    }
 
 
     function cb(start, end) {

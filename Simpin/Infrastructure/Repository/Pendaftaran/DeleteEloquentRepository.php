@@ -22,7 +22,7 @@ class DeleteEloquentRepository implements DeleteRepository
             }
             $pinjaman->delete();
         }
-
+        $anggota->delete();
         return $anggota;
     }
 }

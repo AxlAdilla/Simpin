@@ -44,7 +44,7 @@
                         <i class="material-icons">calendar_today</i> 
                     </div>
                     <div class="content">
-                        <div class="text">TANGGAL BAYAR</div>
+                        <div class="text">JATUH TEMPO</div>
                         <div class="number ">{{$data->tgl_bayar->toFormattedDateString()}}</div>
                     </div>
                 </div>

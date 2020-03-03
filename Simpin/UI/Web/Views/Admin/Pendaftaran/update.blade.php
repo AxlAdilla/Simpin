@@ -21,7 +21,6 @@
                     <div class="body">
                         <form action="{{route('pendaftaran_update',['id'=>$data->id])}}" method="post">
                         @csrf
-                        @method('PUT')
                             <small style="font-weight:600">Nama Anggota</small>
                             <div class="form-group">
                                 <div class="form-line">

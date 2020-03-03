@@ -95,8 +95,10 @@
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="{{route('akun_password',['id'=>Auth::user()->id])}}"><i class="material-icons">vpn_key</i>Ganti Password</a></li>
+                    {{--
                             <li role="separator" class="divider"></li>
                             <li><a href="{{route('logout')}}"><i class="material-icons">input</i>Sign Out</a></li>
+                    --}}
                         </ul>
                     </div>
                 </div>
@@ -128,6 +130,12 @@
                         <a href="{{route('akun_index')}}">
                             <i class="material-icons">person</i>
                             <span>User</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('logout')}}">
+                            <i class="material-icons">input</i>
+                            <span>Logout</span>
                         </a>
                     </li>
                 </ul>

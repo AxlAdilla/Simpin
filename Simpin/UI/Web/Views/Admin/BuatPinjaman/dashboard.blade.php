@@ -33,8 +33,8 @@
                     <div class="header">
                         <div style="display:flex;justify-content:flex-end">
                             <a class="btn bg-indigo m-l-5 m-r-5" style="font-weight:700" onclick="print()"><i class="material-icons">
-                            print
-                            </i> PRINT</a>
+                            picture_as_pdf
+                            </i> EXPORT</a>
                             <a class="btn btn-success m-l-5 m-r-5" style="font-weight:700" href="{{route('pinjaman_create')}}"><i class="material-icons">
                             add
                             </i> PINJAMAN</a>
@@ -50,7 +50,7 @@
                                     <th>Jaminan</th>
                                     <th>Status</th>
                                     <th>Tanggal Pinjaman</th>
-                                    <th>Tanggal Bayar</th>
+                                    <th>Jatuh Tempo</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -167,6 +167,15 @@ $(function() {
 
     var start = moment("2020-01-01");
     var end = moment();
+    
+    var url = window.location.href
+    var patt = /\d*-\d*-\d*/gm;
+    var result = url.match(patt);
+
+    if (result != null) {
+        var start = moment(result[0]);
+        var end = moment(result[1]);
+    }
 
 
     function cb(start, end) {

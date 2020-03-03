@@ -25,6 +25,9 @@ class AkunController extends Controller
     }
     public function password_update(Request $request,$id)
     {
+        if($request->password != $request->konfirmasi_password){
+            return redirect()->back()->with('notifikasi','Password Tidak Sama')->with('tipe_notifikasi','danger');
+        }
         $passwordUpdateService = new PasswordUpdateService($request,$id);
         $passwordUpdateService->execute();
         return redirect()->back()->with('notifikasi','Sukses Edit Password')->with('tipe_notifikasi','success');

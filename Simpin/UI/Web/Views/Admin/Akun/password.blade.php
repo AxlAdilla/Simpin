@@ -35,6 +35,12 @@
                                     <input type="password" class="form-control" required name="password" placeholder="password">
                                 </div>
                             </div>
+                            <small style="font-weight:600">Konfirmasi Password</small>
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="password" class="form-control" required name="konfirmasi_password" placeholder="konfirmasi password">
+                                </div>
+                            </div>
                             <div style="text-align:center" >
                                 <input class="btn btn-primary" type="submit" value="EDIT">
                             </div>

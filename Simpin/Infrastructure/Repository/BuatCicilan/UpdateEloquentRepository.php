@@ -19,6 +19,12 @@ class UpdateEloquentRepository implements UpdateRepository
         }else {
             $status = 'cicil';
         }
+
+        if ($pinjaman->cicilan->sum('jumlah_cicil') > $pinjaman->jumlah_pinjaman){
+            $cicilan->jumlah_cicil= $cicilan->jumlah_cicil-($pinjaman->cicilan->sum('jumlah_cicil')-$pinjaman->jumlah_pinjaman);
+            $cicilan->save();
+        }
+
         $pinjaman->status = $status;
         $pinjaman->save();
 

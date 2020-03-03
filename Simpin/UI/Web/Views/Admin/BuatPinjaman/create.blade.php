@@ -34,7 +34,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <small style="font-weight:600">Tanggal Bayar</small>
+                            <small style="font-weight:600">Jatuh Tempo</small>
                             <div class="form-group">
                                 <div class="form-line">
                                     <input type="date" required class="form-control " name="tgl_bayar" value="{{date('Y-m-d')}}">
